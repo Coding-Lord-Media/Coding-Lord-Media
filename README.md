@@ -1,4 +1,4 @@
-- 👋 Hi, I’m @Coding-Lord-Media
+- 👋 Hi, I’m the Coding Lord
 - 👀 I’m interested in HTML 5, CSS3, PHP, Python, Javascript, Node js
 - 🌱 I’m currently learning React Js and Django
 - 💞️ I’m looking to collaborate on any project
