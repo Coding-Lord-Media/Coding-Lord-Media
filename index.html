@@ -284,14 +284,46 @@
             </div>
         </div>
     </footer>
-    <div id="cookieBanner" class="fixed bottom-4 left-4 right-4 bg-gray-800 text-white p-4 rounded-md shadow-lg flex flex-col md:flex-row items-center justify-between transition-opacity duration-300">
-  <div class="mb-2 md:mb-0">
-    We use cookies and cache to improve your experience. By using our site, you agree to our policy.
+
+  <!-- Cookie Banner -->
+  <div id="cookieBanner" class="fixed bottom-6 left-6 right-6 md:left-auto md:right-6 md:bottom-6 z-50 hidden">
+    <div class="bg-white shadow-xl rounded-lg px-6 py-5 md:max-w-xl mx-auto flex flex-col md:flex-row md:items-center justify-between space-y-4 md:space-y-0 md:space-x-6">
+      
+      <div class="text-gray-800">
+        <h2 class="text-lg font-semibold">We use cookies & cache</h2>
+        <p class="text-sm text-gray-600 mt-1">
+          This website uses cookies and browser cache to enhance the user experience and analyze traffic. Read our 
+          <a href="#" class="text-orange-500 hover:underline">privacy policy</a>.
+        </p>
+      </div>
+      
+      <div class="flex space-x-3">
+        <button onclick="setCookieChoice(false)" class="px-5 py-2 rounded-lg text-sm font-medium bg-gray-200 text-gray-800 hover:bg-gray-300 transition">
+          Decline
+        </button>
+        <button onclick="setCookieChoice(true)" class="px-5 py-2 rounded-lg text-sm font-medium text-white bg-orange-500 hover:bg-orange-600 transition">
+          Accept All
+        </button>
+      </div>
+    </div>
   </div>
-  <button id="dismissBtn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">
-    Got it
-  </button>
-</div>
+
+  <script>
+    // Show banner only if no decision has been made
+    window.onload = function () {
+      const cookieChoice = localStorage.getItem('cookieConsent');
+      if (!cookieChoice) {
+        document.getElementById('cookieBanner').classList.remove('hidden');
+      }
+    };
+
+    // Save choice and hide banner
+    function setCookieChoice(accepted) {
+      localStorage.setItem('cookieConsent', accepted ? 'accepted' : 'declined');
+      document.getElementById('cookieBanner').classList.add('hidden');
+    }
+  </script>
+
 
 <script>
   const banner = document.getElementById('cookieBanner');
