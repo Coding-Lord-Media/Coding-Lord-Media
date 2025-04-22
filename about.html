@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | </title>
+    <meta name="description" content="Learn about my professional journey, skills, and experience">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#0F172A",
+                        secondary: "#F97316"
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'float': 'float 3s ease-in-out infinite'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-primary text-white font-sans antialiased">
+ <!-- Navigation -->
+    <nav class="bg-dark/90 backdrop-blur-md sticy w-full fixed top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-secondary">K <span class="text-prmary">N</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="hover:text-secondary transition">Home</a>
+                <a href="about.html" class="hover:text-secondary transition">About</a>
+                <a href="#services" class="hover:text-secondary transition">Services</a>
+                <a href="index.html#contact" class="hover:text-secondary transition">Contact</a>
+            </div>
+            <button class="md:hidden text-xl" id="menuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-dark/95 w-full px-4 py-2" id="mobileMenu">
+            <a href="index.html" class="block py-2 hover:text-secondary transition">Home</a>
+            <a href="about.html" class="block py-2 hover:text-secondary transition">About</a>
+            <a href="#services" class="block py-2 hover:text-secondary transition">Services</a>
+            <a href="index.html#contact" class="block py-2 hover:text-secondary transition">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-24 pb-16 px-4">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-8 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">My <span class="text-secondary">Story</span></h1>
+                <p class="text-md mb-6 opacity-90">I used to wanna Code like Mark Zuckerberg
+until I finally realized that Mark wasn't me <br>
+I took my time to jot down every code that's a quotable.
+Critics say I don't be killing this, but I know I do</p>
+                <div class="flex space-x-4">
+                    <a href="index.html#contact" class="bg-secondary hover:bg-secondary/90 text-white px-6 py-2 rounded-full transition">Contact Me</a>
+                    <a href="EricNjugunaResume.pdf" class="border border-secondary text-secondary hover:bg-secondary/10 px-6 py-2 rounded-full transition">View CV</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div id="threejs-container" class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-secondary animate-float"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 bg-primary/95">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">About <span class="text-secondary">Me</span></h2>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/3">
+                    <img src="https://njugunakieti.netlify.app/njuguna.jpg" alt="Profile photo" class="w-full rounded-lg shadow-xl" loading="lazy">
+                </div>
+                <div class="md:w-2/3">
+                    <p class="text-md mb-6">My Mother had faith in me—she even let me use her last bit of money for school, knowing her account was empty that's who i do it for. My dad supported me too, but in his own way—he believed, just kept asking when I’d finally release my work.</p>
+                    <p class="text-md mb-6">How long is this gonna take, son? You still haven’t eaten, son.
+At 22, I had two cars and my own place.”
+It’s a sacrifice—I try to tell him.
+That’s when he turns to the TV and admits he’s jealous
+Of all these folks making money, even if their work doesn’t seem all that real.
+“I’m not trying to break your confidence or push you to quit—
+I just want to see you make it, to really be seen.</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <div class="bg-primary/80 p-4 rounded-lg border border-secondary/20 text-center">
+                            <i class="fas fa-laptop-code text-secondary text-2xl mb-2"></i>
+                            <p>ICT</p>
+                        </div>
+                        <div class="bg-primary/80 p-4 rounded-lg border border-secondary/20 text-center">
+                            <i class="fas fa-broadcast-tower text-secondary text-2xl mb-2"></i>
+                            <p>Telecom</p>
+                        </div>
+                        <div class="bg-primary/80 p-4 rounded-lg border border-secondary/20 text-center">
+                            <i class="fas fa-server text-secondary text-2xl mb-2"></i>
+                            <p>I.T Support</p>
+                        </div>
+                        <div class="bg-primary/80 p-4 rounded-lg border border-secondary/20 text-center">
+                            <i class="fas fa-fingerprint text-secondary text-2xl mb-2"></i>
+                            <p>Cyber Security</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-dark">
+        <div class="container mx-auto px-4">
+<h2 class="text-3xl font-bold mb-12 text-center">Services <span class="text-secondary">Offered</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class=" text-4xl mb-4">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Ethical Penetration Testing</h3>
+                    <p>Identifying and fixing security vulnerabilities in your systems before malicious actors can exploit them.</p>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class="text-primry text-4xl mb-4">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Surveillance Systems</h3>
+                    <p>Designing and installing comprehensive security camera systems for homes and businesses.</p>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class="text-prmary text-4xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Hardware Repair & Maintenance</h3>
+                    <p>Diagnosing and fixing hardware issues for computers, laptops, and other electronic devices.</p>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class="text-prmary text-4xl mb-4">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">System Installations</h3>
+                    <p>Professional installation and configuration of operating systems and software.</p>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class="text-priary text-4xl mb-4">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Network Setup & Security</h3>
+                    <p>Designing, implementing, and securing wired and wireless networks for optimal performance.</p>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class="text-prmary text-4xl mb-4">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Software Development</h3>
+                    <p>Custom software solutions tailored to your business needs.</p>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class="text-priary text-4xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Website Development</h3>
+                    <p>Modern web development using Node.js, Python, JavaScript, PHP, HTML5, CSS3, Angular, React and more.</p>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card bg-gray-800 p-6 rounded-lg transition duration-300">
+                    <div class="text-priary text-4xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">IT Support</h3>
+                    <p>Comprehensive technical support for all your IT needs, available remotely or on-site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-16 px-4 bg-primary/95">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">Work <span class="text-secondary">Experience</span></h2>
+            <div class="space-y-8">
+                <div class="bg-primary/80 p-6 rounded-lg border-l-4 border-secondary shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Consolata Hospital Nkubu </h3>
+                        <p class="text-secondary">2024(3 months Attachment)</p>
+                    </div>
+                    <p class="opacity-90 mb-4">
+Keeping systems, networks, and medical software running smoothly. I help staff with tech issues, protect patient data, and support tools like "Care Integrated Management System (CIMS) and diagnostic machines.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Networking</span>
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">I.T Support</span>
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">System Maintenance</span>
+                    </div>
+                </div>
+                <div class="bg-primary/80 p-6 rounded-lg border-l-4 border-secondary shadow-lg">
+                    <div class="flex flex-col md:flex-row justify-between mb-4">
+                        <h3 class="text-xl font-semibold">Fullstack Developer</h3>
+                        <p class="text-secondary">2016 - Present</p>
+                    </div>
+                    <p class="opacity-90 mb-4">Developed responsive web interfaces and collaborated with designers to implement UI/UX best practices.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">JavaScript</span>
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">Node Js</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-16 px-4 parallax" style="background-image: url('https://i.imgur.com/Zoa541B.jpeg');">
+        <div class="container mx-auto bg-primary/90 backdrop-blur-sm p-8 rounded-lg">
+            <h2 class="text-3xl font-bold mb-12 text-center">My <span class="text-secondary">Education</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-primary/80 p-4 rounded-lg border border-secondary/20">
+                    <div class="flex items-center mb-4">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvV8GfEn5phIahsYk86nvJn-IA6ALaOdIdIQ&s" alt="University logo" class="w-16 h-16 rounded-full mr-4" loading="lazy">
+                        <div>
+                            <h3 class="text-xl font-semibold">I.T Technician Level 5</h3>
+                            <p class="text-secondary">2023- 2025</p>
+                        </div>
+                    </div>
+                    <p class="opacity-90">Specialized in Human-Computer Interaction and Web Technologies.</p>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Section >
+    <section id="video" class="py-16 px-4 bg-primary/95">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold mb-12 text-center">My <span class="text-secondary">Work</span></h2>
+            <div class="aspect-w-16 aspect-h-9 bg-black rounded-lg overflow-hidden shadow-xl">
+                <iframe class="w-full h-full" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section-->
+
+    <!-- Footer -->
+    <footer class="bg-dark/90 mt-auto py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <a href="#" class="text-xl font-bold text-secondary">CODING <span class="text-primry">LORD</span></a>
+                </div>
+                <div class="flex space-x-6 mb-4 md:mb-0">
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=100078800312885" class="text-gray-400 hover:text-secondary transition"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank"  href= "https://x.com/kieti_njuguna" class="text-gray-400 hover:text-secondary transition"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/eric-njuguna-6b2b94234" class="text-gray-400 hover:text-secondary transition"><i class="fab fa-linkedin-in"></i></a>
+                    <a target="_blank" href="https://github.com/Coding-Lord-Media" class="text-gray-400 hover:text-secondary transition"><i class="fab fa-github"></i></a>
+                </div>
+                <div class="text-gray-400 text-sm">
+                    &copy; <span id="year"></span> Kieti Njuguna. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Scroll to Top -->
+    <button id="scroll-top" class="fixed bottom-4 right-4 bg-secondary hover:bg-secondary/90 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition opacity-0 invisible">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+ // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        // Initialize Three.js scene
+        const initThreeJS = () => {
+            const container = document.getElementById('threejs-container');
+            const width = container.clientWidth;
+            const height = container.clientHeight;
+
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(width, height);
+            container.appendChild(renderer.domElement);
+
+            // Add lights
+            const ambientLight = new THREE.AmbientLight(0x404040);
+            scene.add(ambientLight);
+            const directionalLight = new THREE.DirectionalLight(0xF97316, 1);
+            directionalLight.position.set(1, 1, 1);
+            scene.add(directionalLight);
+
+            // Add geometry
+            const geometry = new THREE.IcosahedronGeometry(1, 1);
+            const material = new THREE.MeshPhongMaterial({ 
+                color: 0xF97316,
+                emissive: 0xF97316,
+                emissiveIntensity: 0.2,
+                shininess: 100
+            });
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            camera.position.z = 2;
+
+            // Animation loop
+            const animate = () => {
+                requestAnimationFrame(animate);
+                mesh.rotation.x += 0.005;
+                mesh.rotation.y += 0.01;
+                renderer.render(scene, camera);
+            };
+            animate();
+
+            // Handle resize
+            window.addEventListener('resize', () => {
+                const width = container.clientWidth;
+                const height = container.clientHeight;
+                camera.aspect = width / height;
+                camera.updateProjectionMatrix();
+                renderer.setSize(width, height);
+            });
+        };
+
+
+
+        // Scroll to top functionality
+        const handleScroll = () => {
+            const scrollTopBtn = document.getElementById('scroll-top');
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove('opacity-0', 'invisible');
+                scrollTopBtn.classList.add('opacity-100', 'visible');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'invisible');
+                scrollTopBtn.classList.remove('opacity-100', 'visible');
+            }
+        };
+
+        const scrollToTop = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        };
+
+        // Smooth scrolling for anchor links
+        const smoothScroll = () => {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        };
+
+        // Initialize everything when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            initThreeJS();
+            showCookieToast();
+            smoothScroll();
+            
+            document.getElementById('accept-cookies').addEventListener('click', hideCookieToast);
+            document.getElementById('scroll-top').addEventListener('click', scrollToTop);
+            window.addEventListener('scroll', handleScroll);
+        });
+    </script>
+</body>
+</html>
