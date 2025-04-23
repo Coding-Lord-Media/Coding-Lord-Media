@@ -331,10 +331,10 @@
     navigator.serviceWorker
       .register("sw.js")
       .then((registration) => {
-        console.log("ServiceWorker registered:", registration);
+        alert("ServiceWorker registered:", registration);
       })
       .catch((error) => {
-        console.log("ServiceWorker registration failed:", error);
+        alert("ServiceWorker registration failed:", error);
       });
   });
 }
