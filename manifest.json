@@ -1,18 +1,18 @@
 {
   "name": "Njuguna Kieti",
-  "short_name": "App",
+  "short_name": "Njuguna",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0F172A",
   "theme_color": "#0f172a",
   "icons": [
     {
-      "src": "1.jpeg",
-      "sizes": "192x192",
+      "src": "2.png",
+      "sizes": "128x128",
       "type": "image/jpeg"
     },
     {
-      "src": "njuguna.jpg",
+      "src": "fighting.jpg",
       "sizes": "512x512",
       "type": "image/jpeg"
     }
