@@ -3,7 +3,8 @@ const urlsToCache = [
   "/",
   "/index.html",
   "/about.html",
-  "/script.js"
+  "/script.js",
+  "https://cdn.tailwindcss.com"
 ];
 
 self.addEventListener("install", (event) => {
