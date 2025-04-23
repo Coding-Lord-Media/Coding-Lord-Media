@@ -344,7 +344,7 @@ document.getElementById('dismiss-btn')?.addEventListener('click', () => {
     if (deferredPrompt) {
       deferredPrompt.prompt();
       const { outcome } = await deferredPrompt.userChoice;
-      alert(`User response to install: ${outcome}`);
+      console.log(`User response to install: ${outcome}`);
       deferredPrompt = null;
       document.getElementById('install-modal')?.classList.add('hidden');
     }
@@ -375,10 +375,10 @@ document.getElementById('dismiss-btn')?.addEventListener('click', () => {
     navigator.serviceWorker
       .register("sw.js")
       .then((registration) => {
-        alert("ServiceWorker registered:", registration);
+        console.log("ServiceWorker registered:", registration);
       })
       .catch((error) => {
-        alert("ServiceWorker registration failed:", error);
+        console.log("ServiceWorker registration failed:", error);
       });
   });
 }
